@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<div class="page-header">
+    <h1>Document Form</h1>
+    <p>Enter the document data:   </p>
+        <br>
+            <form action="/document_detail" method="post">
+                <input type="hidden" id="op" name="op" value="I">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_id">ID</span>
+                    <input type="text" class="form-control" name="id_doc" aria-label="Sizing example input" aria-describedby="inputGroup_idt">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_number">Number Pages</span>
+                    <input type="text" class="form-control" name="number_pages" aria-label="Sizing example input" aria-describedby="inputGroup_number">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_title">Title</span>
+                    <input type="text" class="form-control" name="title" aria-label="Sizing example input" aria-describedby="inputGroup_title">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_category">Category</span>
+                    <input type="text" class="form-control" name="category" aria-label="Sizing example input" aria-describedby="inputGroup_category">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_author">Author</span>
+                    <input type="text" class="form-control" name="author" aria-label="Sizing example input" aria-describedby="inputGroup_author">
+                </div>
+
+                <br >
+                <input class="btn btn-primary" type="submit" name="form" value="Submit" />
+            </form>
+</div>
+{% endblock %}
